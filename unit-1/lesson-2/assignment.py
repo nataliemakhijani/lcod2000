@@ -1,16 +1,16 @@
 from unit1lesson2 import *
 
 # smallest number
-smallest = number_list[0]
+smallest = number_list[0] # set smallest to first number, will compare against this
 for number in number_list:
-    if number < smallest: # if it's smaller than the current smallest, it becomes the new number to compare against
-        smallest = number
+    if number < smallest: # if it's smaller than the current smallest, 
+        smallest = number # it becomes the new number to compare against
 print("smallest number", smallest) # 175
 # can this be done as a one-liner? probably.
 # could also be done recursively
 
 # smallest number above 500
-numbers_above_500 = [num for num in number_list if num > 500]
+numbers_above_500 = [num for num in number_list if num > 500] # filter out all numbers < 500, not very legible though
 smallest = numbers_above_500[0]
 for number in numbers_above_500:
     if number < smallest: # if it's smaller than the current smallest, it becomes the new number to compare against
