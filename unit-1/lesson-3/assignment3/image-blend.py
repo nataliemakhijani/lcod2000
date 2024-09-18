@@ -12,5 +12,5 @@ if len(args) < 2: # if there aren't enough args
 # PIL instance initialization
 primary_image = Image.open(args[0])
 secondary_image = Image.open(args[1])
-blended_image = Image.blend(primary_image, secondary_image, .5) # images don't match error. tried different formats, matching sizes, ez
-blended_image.image('blended.jpg')
+blended_image = Image.blend(primary_image, secondary_image, .5) # images don't match error. tried different formats, matching sizes, ez -> IMAGES SHOULD BE SAME SIZE, PIL error isn't very descriptive.
+blended_image.save('blended.jpg')
