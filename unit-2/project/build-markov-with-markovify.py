@@ -8,7 +8,7 @@ generator = markovify.Text(corpus, state_size=3) #
 text = ""
 
 for i in range(4): # we want 4 sections
-    section_title = str(generator.make_sentence())
+    section_title = str(generator.make_short_sentence(50, 25)) # for some reason, this doesn't reliably work
     section = "# " + section_title + "\n\n"
 
     for j in range(5): # 5 paras per section

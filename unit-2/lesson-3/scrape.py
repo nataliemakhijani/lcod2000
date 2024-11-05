@@ -11,7 +11,7 @@ french_onion_text = french_onion_soup.get_text()
 articles = []
 
 def getTitles(soupdata):
-    titles = soupdata.select("content:encoded")
+    titles = soupdata.find_all("content:encoded") # this gives me html, so now run thru BS again?
     if titles:
         for t in titles:
             articles.append(t.get_text())
